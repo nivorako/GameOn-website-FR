@@ -37,6 +37,7 @@ img {
 .header-logo {
     float: left;
 }
+
 .main-navbar {
     float: right;
 }
@@ -77,7 +78,9 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -232,6 +235,7 @@ input[data-error]::after {
     font-size: 0.4em;
     color: red;
 } */
+
 .checkbox-label,
 .checkbox2-label {
   position: relative;

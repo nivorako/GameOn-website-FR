@@ -16,6 +16,7 @@ modalClose.addEventListener("click", closeModal);
 // validate form
 form.addEventListener('submit',(e) => {
   e.preventDefault();
+  console.log("hop validate!!!")
   validate();
 });
 

@@ -56,6 +56,7 @@ function removeErrorFor(id) {
 
 
 export function validate() {
+    
     let error = 0;
 
     if (firstname.value.length <= 2) {

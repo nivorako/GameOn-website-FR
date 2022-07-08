@@ -1,4 +1,3 @@
-import { closeModal } from "./modal.js";
 
 // check if radio btn is selected on submit
 const locationChecked = document.querySelectorAll('input[name="location"]:checked');
@@ -12,6 +11,11 @@ const checkBox1 = document.getElementById('checkbox1');
 // checkbox list
 const checkList = document.querySelectorAll('input[name = "checkbox"]');
 
+// Modal-body
+const modal = document.querySelector('.modal-body')
+
+//thanks
+const thanks = document.querySelector('.thanks')
 
 // form must be valid when user click on "submit"
 const firstname = document.getElementById('firstname');
@@ -125,6 +129,7 @@ export function validate() {
         for (let i = 0; i < checkList.length; i++) {
             checkList[i].checked = "";
         }
-        closeModal();
+        modal.classList.add('hidden')
+        thanks.classList.remove('hidden')
     }
 }

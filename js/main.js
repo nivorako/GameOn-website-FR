@@ -6,6 +6,7 @@ const navIcon = document.querySelector('.icon');
 const modalBtn = document.querySelectorAll(".modal-btn");
 const modalClose = document.querySelector("#close");
 const form = document.getElementById("form");
+const thanksBtn = document.querySelector('.thanks-closeBtn')
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -20,6 +21,8 @@ form.addEventListener('submit',(e) => {
   validate();
 });
 
+// close thanks modal
+thanksBtn.addEventListener("click", closeModal)
 
 // set click event on icon bar when max-width 760
 navIcon.addEventListener('click', () => {

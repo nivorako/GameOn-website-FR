@@ -20,6 +20,7 @@ form.addEventListener('submit',(e) => {
   validate();
 });
 
+
 // set click event on icon bar when max-width 760
 navIcon.addEventListener('click', () => {
   editNav();

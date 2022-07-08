@@ -25,7 +25,7 @@ const errorList = {
     "firstname": "veuillez ecrire deux caractères au minimum",
     "lastname": "veuillez ecrire deux caractères au minimum",
     "email": "veuillez entrez un mail valide",
-    "birthdate": "trop jeune pour zouer",
+    "birthdate": "minimum deux ans pour zouer",
     "quantity": "Entrez un chiffre entre 0 et 50",
     'location': "choisissez une ville",
     "checkbox": "veuillez valder la condition générale"
@@ -56,7 +56,7 @@ function removeErrorFor(id) {
 
 
 export function validate() {
-    
+   
     let error = 0;
 
     if (firstname.value.length <= 2) {
@@ -95,13 +95,17 @@ export function validate() {
     }
 
     if (locationChecked.length === 0) {
+        console.log('check not ok')
+        console.log("locationChecked.length: ", locationChecked.length)
         setErrorFor('location');
         error++;
     } else {
         removeErrorFor('location');
+        console.log("check ok")
+        console.log("locationChecked.length: ", locationChecked.length)
     }
 
-    if (!checkBox1.checked) {
+    if (!checkBox1.checked) {   
         setErrorFor('checkbox');
         error++;
     }

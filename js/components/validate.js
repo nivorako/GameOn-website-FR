@@ -1,8 +1,5 @@
 import { closeModal } from "./modal.js";
 
-// check if radio btn is selected on submit
-const locationChecked = document.querySelectorAll('input[name="location"]:checked');
-
 // radio btn list
 const locationRadio = document.querySelectorAll('input[name = "location"]');
 
@@ -21,7 +18,7 @@ const birthDate = document.getElementById('birthdate');
 const quantityTournament = document.getElementById('quantity');
 
 //const REGEX pour nom prenom
-const regex = /^[A-Z][a-zA-Z]+$/
+const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/
 
 // error list
 const errorList = {
@@ -36,10 +33,23 @@ const errorList = {
 
 // firstname validation
 export function validateFirstName(){
-    if (firstname.value.trim().length <= 2 && firstname.value.trim().match(regex)){
-        console.log("ok prenom")
+    if (firstname.value.trim().length >= 2 && firstname.value.trim().match(regex)){
+        setSuccessFor("firstname")
+        return true
     }else{
-        console.log('prenom not ok')
+        setErrorFor('firstname')
+        return false
+    }
+}
+
+// firstname validation
+export function validateLastName(){
+    if (lastname.value.trim().length >= 2 && lastname.value.trim().match(regex)){
+        setSuccessFor("lastname")
+        return true
+    }else{
+        setErrorFor('lastname')
+        return false
     }
 }
 
@@ -68,6 +78,42 @@ export function validateBirthdate() {
         console.log('trop vieux')
         setErrorFor('birthdate')
         return false
+    }
+}
+
+// tournament validation between 0 and 50 set
+export function validateTournament(){
+    if ((quantityTournament.value <= 0) || (quantityTournament.value >= 50)){
+        setErrorFor("quantity")
+        return false
+    }else{
+        setSuccessFor('quantity')
+        return true
+    }
+}
+
+// location validation
+export function validateLocation(){
+    // check if radio btn is selected on submit
+    const locationChecked = document.querySelectorAll('input[name="location"]:checked');
+    if (locationChecked.length === 0) {
+        setErrorFor('location')
+        return false
+    }else{
+        removeErrorFor('location')
+        console.log('location OK')
+        return true
+    }
+}
+
+// checkbox validation
+export function validateCheck(){
+    if (!checkBox1.checked){
+        setErrorFor("checkbox")
+        return false
+    }else{
+        removeErrorFor("checkbox")
+        return true
     }
 }
 

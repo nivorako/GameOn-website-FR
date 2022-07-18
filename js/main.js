@@ -2,7 +2,11 @@ import {editNav} from "./components/editNav.js";
 import { fieldsValidation, 
          validateEmail,
          validateBirthdate,
-         validateFirstName } from "./components/validate.js";
+         validateFirstName,
+         validateLastName,
+         validateTournament,
+         validateLocation,
+         validateCheck } from "./components/validate.js";
 import {  launchModal, closeModal } from "./components/modal.js";
  
 const navIcon = document.querySelector('.icon');
@@ -11,11 +15,19 @@ const modalClose = document.querySelector("#close");
 const email = document.getElementById('email');
 const birthDate = document.getElementById('birthdate');
 const firstname = document.getElementById('firstname');
+const lastname = document.getElementById('lastname');
+const quantityTournament = document.getElementById('quantity');
+const location = document.getElementById('locationField');
+const check = document.getElementById('checkbox1')
 //const form = document.getElementById("form");
 
 fieldsValidation(email, validateEmail, 'focusout');
 fieldsValidation(birthDate, validateBirthdate, 'focusout');
 fieldsValidation(firstname, validateFirstName, 'focusout');
+fieldsValidation(lastname, validateLastName, 'focusout');
+fieldsValidation(quantityTournament, validateTournament, 'focusout');
+fieldsValidation(location, validateLocation, 'change');
+fieldsValidation(check, validateCheck, 'change')
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 

@@ -21,7 +21,8 @@ const lastname = document.getElementById('lastname');
 const quantityTournament = document.getElementById('quantity');
 const location = document.getElementById('locationField');
 const check = document.getElementById('checkbox1')
-//const form = document.getElementById("form");
+
+const thanksBtn = document.querySelector('.thanks-closeBtn')
 
 // validate appropriate function on each field focusout
 fieldsValidation(email, validateEmail, 'focusout');
@@ -47,7 +48,7 @@ form.addEventListener('submit',(e) => {
 });
 
 // close thanks modal
-//thanksBtn.addEventListener("click", closeModal)
+thanksBtn.addEventListener("click", closeModal)
 
 // set click event on icon bar when max-width 760
 navIcon.addEventListener('click', () => {

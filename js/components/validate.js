@@ -74,11 +74,9 @@ export function validateBirthdate() {
     const dateNow = new Date();
     const date = dateNow.getFullYear() - new Date(birthDate.value).getFullYear();
     if(date > 10){
-        console.log('trop jeune')
         setSuccessFor("birthdate")
         return true
     }else{
-        console.log('trop vieux')
         setErrorFor('birthdate')
         return false
     }
@@ -104,7 +102,6 @@ export function validateLocation(){
         return false
     }else{
         removeErrorFor('location')
-        console.log('location OK')
         return true
     }
 }

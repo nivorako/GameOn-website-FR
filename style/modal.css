@@ -210,7 +210,7 @@ input {
 }
 .formData[data-error]::after {
   content: attr(data-error);
-  font-size: 0.4em;
+  font-size: .8em;
   color: #e54858;
   display: block;
   margin-top: 7px;
@@ -224,8 +224,14 @@ input {
   opacity: 1;
 }
 .formData[data-error-visible="true"] .text-control {
-  border: 2px solid #e54858;
+  border: 3px solid #e54858;
 }
+
+.formData[data-error-visible="false"] .text-control {
+  border: 3px solid #48e562;
+}
+
+/*
 /* 
 input[data-error]::after {
     content: attr(data-error);

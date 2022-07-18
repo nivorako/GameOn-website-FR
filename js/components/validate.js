@@ -20,6 +20,9 @@ const eMail = document.getElementById('email');
 const birthDate = document.getElementById('birthdate');
 const quantityTournament = document.getElementById('quantity');
 
+//const REGEX pour nom prenom
+const regex = /^[A-Z][a-zA-Z]+$/
+
 // error list
 const errorList = {
     "firstname": "veuillez ecrire deux caractères au minimum",
@@ -31,17 +34,41 @@ const errorList = {
     "checkbox": "veuillez valder la condition générale"
 }
 
+// firstname validation
+export function validateFirstName(){
+    if (firstname.value.trim().length <= 2 && firstname.value.trim().match(regex)){
+        console.log("ok prenom")
+    }else{
+        console.log('prenom not ok')
+    }
+}
 
 // email validation
-function validateEmail(emailValue) {
+export function validateEmail() {
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    re.test(emailValue)
+    let emailValue = eMail.value;
+    if(emailValue.trim().match(re)){
+        setSuccessFor("email")
+        return true
+    }else{
+        setErrorFor('email')
+        return false
+    }    
 }
 
 // birth date validation, will be over 1 year
-function validateBirthdate(date) {
+export function validateBirthdate() {
     const dateNow = new Date();
-    return (dateNow.getFullYear() - new Date(date).getFullYear());
+    const date = dateNow.getFullYear() - new Date(birthDate.value).getFullYear();
+    if(date > 10){
+        console.log('trop jeune')
+        setSuccessFor("birthdate")
+        return true
+    }else{
+        console.log('trop vieux')
+        setErrorFor('birthdate')
+        return false
+    }
 }
 
 // set data error for each elt according to id
@@ -54,6 +81,15 @@ function removeErrorFor(id) {
     document.getElementById(id + 'Field').setAttribute('data-error-visible', false);
 }
 
+// set success for eache elt according to id
+function setSuccessFor(id) {
+    document.getElementById(id + 'Field').setAttribute('data-error-visible', false);
+}
+
+// check fields validation on each focus out
+export function fieldsValidation(elt, method, event){
+    elt.addEventListener(event, method)
+}
 
 // export function validate() {
 //     let error = 0;

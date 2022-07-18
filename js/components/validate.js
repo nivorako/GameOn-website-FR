@@ -1,5 +1,3 @@
-import { closeModal } from "./modal.js";
-
 // radio btn list
 const locationRadio = document.querySelectorAll('input[name = "location"]');
 
@@ -117,6 +115,11 @@ export function validateCheck(){
     }
 }
 
+// check fields validation on each focus out
+export function fieldsValidation(elt, method, event){
+    elt.addEventListener(event, method)
+}
+
 // set data error for each elt according to id
 function setErrorFor(id) {
     document.getElementById(id + 'Field').setAttribute('data-error-visible', true);
@@ -132,10 +135,6 @@ function setSuccessFor(id) {
     document.getElementById(id + 'Field').setAttribute('data-error-visible', false);
 }
 
-// check fields validation on each focus out
-export function fieldsValidation(elt, method, event){
-    elt.addEventListener(event, method)
-}
 
 // export function validate() {
 //     let error = 0;

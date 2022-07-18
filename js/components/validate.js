@@ -1,6 +1,4 @@
 
-// check if radio btn is selected on submit
-const locationChecked = document.querySelectorAll('input[name="location"]:checked');
 
 // radio btn list
 const locationRadio = document.querySelectorAll('input[name = "location"]');
@@ -60,6 +58,9 @@ function removeErrorFor(id) {
 
 
 export function validate() {
+    // check if radio btn is selected on submit
+const locationChecked = document.querySelectorAll('input[name="location"]:checked');
+
    
     let error = 0;
 
@@ -68,6 +69,7 @@ export function validate() {
         error++;
     } else {
         removeErrorFor('firstname');
+        firstname.classList.add('success')
     }
 
     if (lastname.value.length <= 2) {
@@ -75,6 +77,7 @@ export function validate() {
         error++;
     } else {
         removeErrorFor('lastname');
+        lastname.classList.add('success')
     }
 
     if (!validateEmail(eMail.value)) {
@@ -82,6 +85,7 @@ export function validate() {
         error++;
     } else {
         removeErrorFor('email');
+        eMail.classList.add("success")
     }
 
     if ((validateBirthdate(birthDate.value) <= 1) || (birthDate.value === "")) {
@@ -89,6 +93,7 @@ export function validate() {
         error++;
     } else {
         removeErrorFor('birthdate');
+        birthDate.classList.add('success')
     }
 
     if ((quantityTournament.value <= 0) || (quantityTournament.value >= 50)) {

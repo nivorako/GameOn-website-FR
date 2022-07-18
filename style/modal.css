@@ -562,3 +562,7 @@ footer {
   opacity: 0;
   z-index: -1;
 }
+
+.success{
+  border: green 4px solid;
+}

@@ -33,9 +33,9 @@ const errorList = {
 
 
 // email validation
-function validateEmail(email) {
+function validateEmail(emailValue) {
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+    re.test(emailValue)
 }
 
 // birth date validation, will be over 1 year
@@ -55,71 +55,71 @@ function removeErrorFor(id) {
 }
 
 
-export function validate() {
-    let error = 0;
+// export function validate() {
+//     let error = 0;
 
-    if (firstname.value.length <= 2) {
-        setErrorFor('firstname');
-        error++;
-    } else {
-        removeErrorFor('firstname');
-    }
+//     if (firstname.value.length <= 2) {
+//         setErrorFor('firstname');
+//         error++;
+//     } else {
+//         removeErrorFor('firstname');
+//     }
 
-    if (lastname.value.length <= 2) {
-        setErrorFor('lastname');
-        error++;
-    } else {
-        removeErrorFor('lastname');
-    }
+//     if (lastname.value.length <= 2) {
+//         setErrorFor('lastname');
+//         error++;
+//     } else {
+//         removeErrorFor('lastname');
+//     }
 
-    if (!validateEmail(eMail.value)) {
-        setErrorFor('email');
-        error++;
-    } else {
-        removeErrorFor('email');
-    }
+//     if (!validateEmail(eMail.value)) {
+//         setErrorFor('email');
+//         error++;
+//     } else {
+//         removeErrorFor('email');
+//     }
 
-    if ((validateBirthdate(birthDate.value) <= 1) || (birthDate.value === "")) {
-        setErrorFor('birthdate');
-        error++;
-    } else {
-        removeErrorFor('birthdate');
-    }
+//     if ((validateBirthdate(birthDate.value) <= 1) || (birthDate.value === "")) {
+//         setErrorFor('birthdate');
+//         error++;
+//     } else {
+//         removeErrorFor('birthdate');
+//     }
 
-    if ((quantityTournament.value <= 0) || (quantityTournament.value >= 50)) {
-        setErrorFor('quantity');
-        error++;
-    } else {
-        removeErrorFor('quantity');
-    }
+//     if ((quantityTournament.value <= 0) || (quantityTournament.value >= 50)) {
+//         setErrorFor('quantity');
+//         error++;
+//     } else {
+//         removeErrorFor('quantity');
+//     }
 
-    if (locationChecked.length === 0) {
-        setErrorFor('location');
-        error++;
-    } else {
-        removeErrorFor('location');
-    }
+//     if (locationChecked.length === 0) {
+//         setErrorFor('location');
+//         error++;
+//     } else {
+//         removeErrorFor('location');
+//     }
 
-    if (!checkBox1.checked) {
-        setErrorFor('checkbox');
-        error++;
-    }
-    else {
-        removeErrorFor('checkbox');
-    }
+//     if (!checkBox1.checked) {
+//         setErrorFor('checkbox');
+//         error++;
+//     }
+//     else {
+//         removeErrorFor('checkbox');
+//     }
 
-    if (error === 0) {
-        firstname.value = "";
-        lastname.value = "";
-        eMail.value = "";
-        birthDate.value = "";
-        quantityTournament.value = "";
-        for (let i = 0; i < locationRadio.length; i++) {
-            locationRadio[i].checked = "";
-        }
-        for (let i = 0; i < checkList.length; i++) {
-            checkList[i].checked = "";
-        }
-        closeModal();
-    }
-}
+//     if (error === 0) {
+//         firstname.value = "";
+//         lastname.value = "";
+//         eMail.value = "";
+//         birthDate.value = "";
+//         quantityTournament.value = "";
+//         for (let i = 0; i < locationRadio.length; i++) {
+//             locationRadio[i].checked = "";
+//         }
+//         for (let i = 0; i < checkList.length; i++) {
+//             checkList[i].checked = "";
+//         }
+//         closeModal();
+//     }
+// }

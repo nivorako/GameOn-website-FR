@@ -1,9 +1,6 @@
 // radio btn list
 const locationRadio = document.querySelectorAll('input[name = "location"]');
 
-// check if checkbox is checked
-
-
 // checkbox list
 const checkList = document.querySelectorAll('input[name = "checkbox"]');
 
@@ -12,13 +9,6 @@ const modal = document.querySelector('.modal-body')
 
 //thanks
 const thanks = document.querySelector('.thanks')
-
-// form must be valid when user click on "submit"
-
-
-
-
-
 
 //const REGEX pour nom prenom
 const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/

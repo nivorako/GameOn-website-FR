@@ -39,6 +39,16 @@ function resetField(){
     //closeModal();
 }
 
+function validateAllFields(){
+    validateEmail()
+    validateFirstName()
+    validateBirthdate()
+    validateFirstName()
+    validateLastName()
+    validateTournament()
+    validateLocation()
+    validateCheck()
+}
 export function submitForm(){
     if(
         validateEmail() &&
@@ -57,6 +67,7 @@ export function submitForm(){
         body.classList.add('hidden')
     }else{
         console.log('il en reste')
+        validateAllFields()
     }
 
 }

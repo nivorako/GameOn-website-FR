@@ -6,7 +6,16 @@ import { fieldsValidation,
          validateLastName,
          validateTournament,
          validateLocation,
-         validateCheck } from "./components/validate.js";
+         validateCheck 
+        } from "./components/validate.js";
+import { getEmail,
+         getBirthDate,
+         getFirstname,
+         getLastname,
+         getQuantityTournament,
+         getLocationField,
+         getCheckbox
+        } from "./components/getElement.js";
 import {  launchModal, closeModal } from "./components/modal.js";
 import { submitForm } from "./components/submitForm.js"
  
@@ -14,13 +23,13 @@ const navIcon = document.querySelector('.icon');
 const modalBtn = document.querySelectorAll(".modal-btn");
 const modalClose = document.querySelector("#close");
 
-const email = document.getElementById('email');
-const birthDate = document.getElementById('birthdate');
-const firstname = document.getElementById('firstname');
-const lastname = document.getElementById('lastname');
-const quantityTournament = document.getElementById('quantity');
-const location = document.getElementById('locationField');
-const check = document.getElementById('checkbox1')
+const email = getEmail();
+const birthDate = getBirthDate();
+const firstname = getFirstname();
+const lastname = getLastname();
+const quantityTournament = getQuantityTournament();
+const location = getLocationField();
+const check = getCheckbox();
 
 const thanksBtn = document.querySelector('.thanks-closeBtn')
 

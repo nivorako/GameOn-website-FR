@@ -1,24 +1,18 @@
-// radio btn list
-const locationRadio = document.querySelectorAll('input[name = "location"]');
+import { getFirstname, 
+         getLastname, 
+         getBirthDate,
+         getEmail,
+         getQuantityTournament
+         } from "./getElement.js";
 
 // check if checkbox is checked
 const checkBox1 = document.getElementById('checkbox1');
 
-// checkbox list
-const checkList = document.querySelectorAll('input[name = "checkbox"]');
-
-// Modal-body
-const modal = document.querySelector('.modal-body')
-
-//thanks
-const thanks = document.querySelector('.thanks')
-
-// form must be valid when user click on "submit"
-const firstname = document.getElementById('firstname');
-const lastname = document.getElementById('lastname');
-const eMail = document.getElementById('email');
-const birthDate = document.getElementById('birthdate');
-const quantityTournament = document.getElementById('quantity');
+const firstname = getFirstname();
+const lastname = getLastname();
+const eMail = getEmail();
+const birthDate = getBirthDate();
+const quantityTournament = getQuantityTournament();
 
 //const REGEX pour nom prenom
 const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/
@@ -33,6 +27,7 @@ const errorList = {
     'location': "choisissez une ville",
     "checkbox": "veuillez valder la condition générale"
 }
+
 
 // firstname validation
 export function validateFirstName(){

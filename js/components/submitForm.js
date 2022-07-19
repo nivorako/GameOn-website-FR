@@ -10,21 +10,22 @@ import {
     validateCheck } from "./validate.js";
 
 
-const firstname = document.getElementById('firstname');
-const lastname = document.getElementById('lastname');
-const eMail = document.getElementById('email');
-const birthDate = document.getElementById('birthdate');
-const quantityTournament = document.getElementById('quantity');
-// radio btn list
-const locationRadio = document.querySelectorAll('input[name = "location"]');
-// checkbox list
-const checkList = document.querySelectorAll('input[name = "checkbox"]');
 
 // show thanks div on submit success
 const thanks = document.querySelector('.thanks')
 const body = document.querySelector('.modal-body')
 
 function resetField(){
+    const firstname = document.getElementById('firstname');
+    const lastname = document.getElementById('lastname');
+    const eMail = document.getElementById('email');
+    const birthDate = document.getElementById('birthdate');
+    const quantityTournament = document.getElementById('quantity');
+    // radio btn list
+    const locationRadio = document.querySelectorAll('input[name = "location"]');
+    // checkbox list
+    const checkList = document.querySelectorAll('input[name = "checkbox"]');
+
     firstname.value = ""
     lastname.value = ""
     eMail.value = ""
@@ -60,13 +61,11 @@ export function submitForm(){
         validateLocation() &&
         validateCheck()
     ){
-        console.log('ok tout est validé')
         resetField()
         thanks.classList.remove('hidden')
         thanks.classList.add('show')
         body.classList.add('hidden')
     }else{
-        console.log('il en reste')
         validateAllFields()
     }
 

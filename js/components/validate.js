@@ -2,7 +2,7 @@
 const locationRadio = document.querySelectorAll('input[name = "location"]');
 
 // check if checkbox is checked
-const checkBox1 = document.getElementById('checkbox1');
+
 
 // checkbox list
 const checkList = document.querySelectorAll('input[name = "checkbox"]');
@@ -14,11 +14,11 @@ const modal = document.querySelector('.modal-body')
 const thanks = document.querySelector('.thanks')
 
 // form must be valid when user click on "submit"
-const firstname = document.getElementById('firstname');
-const lastname = document.getElementById('lastname');
-const eMail = document.getElementById('email');
-const birthDate = document.getElementById('birthdate');
-const quantityTournament = document.getElementById('quantity');
+
+
+
+
+
 
 //const REGEX pour nom prenom
 const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/
@@ -36,6 +36,7 @@ const errorList = {
 
 // firstname validation
 export function validateFirstName(){
+    const firstname = document.getElementById('firstname');
     if (firstname.value.trim().length >= 2 && firstname.value.trim().match(regex)){
         setSuccessFor("firstname")
         return true
@@ -47,6 +48,7 @@ export function validateFirstName(){
 
 // firstname validation
 export function validateLastName(){
+    const lastname = document.getElementById('lastname');
     if (lastname.value.trim().length >= 2 && lastname.value.trim().match(regex)){
         setSuccessFor("lastname")
         return true
@@ -58,6 +60,7 @@ export function validateLastName(){
 
 // email validation
 export function validateEmail() {
+    const eMail = document.getElementById('email');
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let emailValue = eMail.value;
     if(emailValue.trim().match(re)){
@@ -71,6 +74,7 @@ export function validateEmail() {
 
 // birth date validation, will be over 1 year
 export function validateBirthdate() {
+    const birthDate = document.getElementById('birthdate');
     const dateNow = new Date();
     const date = dateNow.getFullYear() - new Date(birthDate.value).getFullYear();
     if(date > 10){
@@ -84,6 +88,7 @@ export function validateBirthdate() {
 
 // tournament validation between 0 and 50 set
 export function validateTournament(){
+    const quantityTournament = document.getElementById('quantity');
     if ((quantityTournament.value <= 0) || (quantityTournament.value >= 50)){
         setErrorFor("quantity")
         return false
@@ -108,6 +113,7 @@ export function validateLocation(){
 
 // checkbox validation
 export function validateCheck(){
+    const checkBox1 = document.getElementById('checkbox1');
     if (!checkBox1.checked){
         setErrorFor("checkbox")
         return false

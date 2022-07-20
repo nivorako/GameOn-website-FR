@@ -17,22 +17,20 @@ import {
     validateCheck 
     } from "./validate.js";
 
-
-
 // show thanks div on submit success
 const thanks = document.querySelector('.thanks')
 const body = document.querySelector('.modal-body')
 
 function resetField(){
-    const firstname = document.getElementById('firstname');
-    const lastname = document.getElementById('lastname');
-    const eMail = document.getElementById('email');
-    const birthDate = document.getElementById('birthdate');
-    const quantityTournament = document.getElementById('quantity');
+    const firstname = getFirstname()
+    const lastname = getLastname()
+    const eMail = getEmail()
+    const birthDate = getBirthDate()
+    const quantityTournament = getQuantityTournament()
     // radio btn list
-    const locationRadio = document.querySelectorAll('input[name = "location"]');
+    const locationRadio = getLocationRadio()
     // checkbox list
-    const checkList = document.querySelectorAll('input[name = "checkbox"]');
+    const checkList = getCheckList()
 
     firstname.value = ""
     lastname.value = ""

@@ -68,13 +68,11 @@ export function submitForm(){
         validateLocation() &&
         validateCheck()
     ){
-        console.log('ok tout est validé')
         resetField()
         thanks.classList.remove('hidden')
         thanks.classList.add('show')
         body.classList.add('hidden')
     }else{
-        console.log('il en reste')
         validateAllFields()
     }
 

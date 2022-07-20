@@ -1,14 +1,3 @@
-const firstname = document.getElementById('firstname');
-const lastname = document.getElementById('lastname');
-const eMail = document.getElementById('email');
-const birthDate = document.getElementById('birthdate');
-const quantityTournament = document.getElementById('quantity');
-// radio btn list
-const locationRadio = document.querySelectorAll('input[name = "location"]');
-// checkbox list
-const checkList = document.querySelectorAll('input[name = "checkbox"]');
-const checkBox1 = document.getElementById('checkbox1');
-const location = document.getElementById('locationField');
 
 
 export function getFirstname(){

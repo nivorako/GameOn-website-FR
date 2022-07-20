@@ -455,7 +455,7 @@ input[data-error]::after {
 .hero-headline {
   font-size: 6rem;
   font-weight: normal;
-  white-space: nowrap;
+  white-space: wrap;
 }
 .hero-text {
   width: 146%;
@@ -495,7 +495,7 @@ footer {
   padding-right: 2vw;
   margin: 0 20px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   .hero-section {
     display: block;
     box-shadow: unset;

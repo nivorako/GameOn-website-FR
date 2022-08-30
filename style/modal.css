@@ -29,17 +29,20 @@ p {
 img {
   padding-right: 1rem;
 }
+ 
+/* header */
 
-.topnav {
-  overflow: hidden;
-  margin: 3.5%;
-}
 .header-logo {
     float: left;
 }
 
 .main-navbar {
     float: right;
+}
+
+.topnav {
+  overflow: hidden;
+  margin: 3.5%;
 }
 .topnav a {
   float: left;
@@ -104,6 +107,8 @@ img {
   }
 } 
 
+/*main*/
+
 main {
   font-size: 130%;
   font-weight: bolder;
@@ -118,47 +123,7 @@ main {
 
 }
 
-.modal-btn {
-  font-size: 145%;
-  background: #fe142f;
-  display: flex;
-  margin: auto;
-  padding: 2em;
-  color: #fff;
-  padding: 0.75rem 2.5rem;
-  border-radius: 1rem;
-  cursor: pointer;
-}
-
-.modal-btn:hover {
-  background: #3876ac;
-}
-
-.footer {
-  margin: 20px;
-  padding: 10px;
-  font-family: var(--font-slab);
-}
-
-/* Modal form */
-
-.button {
-  background: #fe142f;
-  margin-top: 0.5em;
-  padding: 1em;
-  color: #fff;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.button:hover {
-  background: #3876ac;
-}
-
-.smFont {
-  font-size: 16px;
-}
+/*modal*/
 
 .bground {
   display: none;
@@ -193,6 +158,41 @@ main {
   max-height: 80vh;
   overflow-y: scroll;
 }
+
+.modal-btn {
+  font-size: 145%;
+  background: #fe142f;
+  display: flex;
+  margin: auto;
+  padding: 2em;
+  color: #fff;
+  padding: 0.75rem 2.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.modal-btn:hover {
+  background: #3876ac;
+}
+
+.button {
+  background: #fe142f;
+  margin-top: 0.5em;
+  padding: 1em;
+  color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background: #3876ac;
+}
+
+.smFont {
+  font-size: 16px;
+}
+
 
 label {
   font-family: var(--font-default);
@@ -332,7 +332,7 @@ input[data-error]::after {
   width: 3px;
   background-color: #fff;
 }
-.close--hover{
+.close:hover{
   transform: scale(1.5);
 }
 .close::before {
@@ -458,7 +458,8 @@ input[data-error]::after {
 .hero-headline {
   font-size: 6rem;
   font-weight: normal;
-  white-space: normal;
+  width: 100%;
+  white-space: nowrap;
 }
 .hero-text {
   width: 146%;
@@ -497,6 +498,11 @@ footer {
   padding-left: 2vw;
   padding-right: 2vw;
   margin: 0 20px;
+}
+.footer {
+  margin: 20px;
+  padding: 10px;
+  font-family: var(--font-slab);
 }
 @media screen and (max-width: 800px) {
   .hero-section {
@@ -575,3 +581,4 @@ footer {
 .success{
   border: green 4px solid;
 }
+

@@ -3,19 +3,22 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Reservation</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="./style/modal.css" />
+
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet" />
+    <link rel="stylesheet" href="./style/modal.css" />
+
+    <title>Reservation</title>
 </head>
 
 <body>
-    <div class="topnav" id="myTopnav">
+    <header class="topnav" id="myTopnav">
         <div class="header-logo">
-            <img alt="logo" src="./assets/Logo.png" class="logo-img"/>
+            <img alt="logo" src="./assets/Logo.png" class="logo-img" />
         </div>
-        <div class="main-navbar">
+        <nav class="main-navbar">
 
             <a href="#" class="active"><span>Accueil</span></a>
             <a href="#"><span>Détails de l'évènement</span></a>
@@ -23,14 +26,13 @@
             <a href="#"><span>Contact</span></a>
             <a href="#"><span>Évènements passés</span></a>
             <a href="javascript:void(0);" class="icon">
-                <!-- onclick="editNav()" -->
                 <i class="fa fa-bars"></i>
             </a>
-        </div>
-    </div>
+        </nav>
+    </header>
 
     <main>
-        <div class="hero-section">
+        <section class="hero-section">
             <div class="hero-content">
                 <h1 class="hero-headline">
                     Marathon national<br>
@@ -50,24 +52,22 @@
             <button class="btn-signup modal-btn" type="button">
                 je m'inscris
             </button>
-        </div>
+        </section>
 
-        <div class="bground">
+        <aside class="bground">
             <div class="content">
                 <span class="close" id="close"></span>
-                <div class="modal-body">
-                   
-                </div>
+                <div class="modal-body"></div>
                 <div class="thanks hidden">
-                   <p class="thanks-title"> MERCI POUR  VOTRE INSCRIPTION</p>
+                    <p class="thanks-title"> MERCI POUR VOTRE INSCRIPTION</p>
 
                     <button type="button" class="button thanks-closeBtn">Fermer</button>
                 </div>
 
             </div>
-        </div>
+        </aside>
     </main>
-    <footer>
+    <footer class="footer">
         <p class="copyrights">
             Copyright 2014 - 2020, GameOn Inc.
         </p>

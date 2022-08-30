@@ -6,7 +6,7 @@ import { getFirstname,
          } from "./getElement.js";
 
 //const REGEX pour nom prenom
-const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/
+const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ \-]+$/
 
 // error list
 const errorList = {

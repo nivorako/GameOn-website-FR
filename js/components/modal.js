@@ -7,7 +7,7 @@ export function closeModal() {
     modalbg.style.display = "none";
 }
 
-// 
+// création modal - insertion dans Form - afficher modal
 export function launchModal() {
     const form = /*html*/`
         <form name="reserve" action="index.html" method="post"  id="form">

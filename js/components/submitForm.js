@@ -46,6 +46,7 @@ function resetField(){
     //closeModal();
 }
 
+// vérifier tous les champs formulaires, si ok passer border en vert sinon msg error
 function validateAllFields(){
     validateEmail()
     validateFirstName()
@@ -56,6 +57,11 @@ function validateAllFields(){
     validateLocation()
     validateCheck()
 }
+// submit Form, si tous les champs validés alors 
+// on vide les champs
+// on cache modal
+// et on montre remerciement
+// sinon on  validateAllFields()
 export function submitForm(){
     if(
         validateEmail() &&

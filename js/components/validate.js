@@ -19,6 +19,21 @@ const errorList = {
     "checkbox": "veuillez valder la condition générale"
 }
 
+// set data error for each elt according to id
+function setErrorFor(id) {
+    document.getElementById(id + 'Field').setAttribute('data-error-visible', true);
+    document.getElementById(id + 'Field').setAttribute('data-error', errorList[id]);
+}
+// remove data error 
+function removeErrorFor(id) {
+    document.getElementById(id + 'Field').setAttribute('data-error-visible', false);
+}
+
+// set success for eache elt according to id
+function setSuccessFor(id) {
+    document.getElementById(id + 'Field').setAttribute('data-error-visible', false);
+}
+
 
 // firstname validation
 export function validateFirstName(){
@@ -113,20 +128,5 @@ export function validateCheck(){
 // check fields validation on each focus out
 export function fieldsValidation(elt, method, event){
     elt.addEventListener(event, method)
-}
-
-// set data error for each elt according to id
-function setErrorFor(id) {
-    document.getElementById(id + 'Field').setAttribute('data-error-visible', true);
-    document.getElementById(id + 'Field').setAttribute('data-error', errorList[id]);
-}
-// remove data error 
-function removeErrorFor(id) {
-    document.getElementById(id + 'Field').setAttribute('data-error-visible', false);
-}
-
-// set success for eache elt according to id
-function setSuccessFor(id) {
-    document.getElementById(id + 'Field').setAttribute('data-error-visible', false);
 }
 

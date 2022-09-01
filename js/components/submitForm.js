@@ -20,6 +20,7 @@ import {
 // show thanks div on submit success
 const thanks = document.querySelector('.thanks')
 const body = document.querySelector('.modal-body')
+const modalBtnClose = document.querySelector('.close')
 
 function resetField(){
     const firstname = getFirstname()
@@ -77,6 +78,8 @@ export function submitForm(){
         thanks.classList.remove('hidden')
         thanks.classList.add('show')
         body.classList.add('hidden')
+        modalBtnClose.classList.add('hidden')
+
     }else{
         validateAllFields()
     }

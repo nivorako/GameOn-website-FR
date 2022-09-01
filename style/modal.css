@@ -319,7 +319,6 @@ input[data-error]::after {
   top: 15px;
   width: 32px;
   height: 32px;
-  opacity: 1;
   cursor: pointer;
   transform: scale(0.7);
 }
@@ -555,8 +554,8 @@ footer {
 
 .thanks{
   position: absolute;
-  bottom: 0;
-  margin-bottom: 20px;
+  top: 0;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -568,6 +567,7 @@ footer {
   text-align: center;
   margin: 0 100px 400px;
 }
+
 .show{
   opacity: 1;
   z-index: 1;

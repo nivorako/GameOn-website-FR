@@ -22,8 +22,8 @@ import { launchModal, closeModal } from "./components/modal.js";
 import { submitForm } from "./components/submitForm.js"
 
 const navIcon = document.querySelector('.icon');
-const modalBtn = document.querySelectorAll(".modal-btn");
-const modalClose = document.querySelector("#close");
+const modalBtn = document.querySelectorAll('.modal-btn')
+const modalClose = document.querySelector(".close");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", () => {
@@ -36,8 +36,7 @@ modalBtn.forEach((btn) => btn.addEventListener("click", () => {
     const location = getLocationField();
     const check = getCheckbox();
 
-    const thanksBtn = document.querySelector('.thanks-closeBtn')
-
+    
     // validate appropriate function on each field focusout
     fieldsValidation(email, validateEmail, 'focusout');
     fieldsValidation(birthDate, validateBirthdate, 'focusout');
@@ -48,8 +47,6 @@ modalBtn.forEach((btn) => btn.addEventListener("click", () => {
     fieldsValidation(location, validateLocation, 'change');
     fieldsValidation(check, validateCheck, 'change')
 
-    const modalBtn = document.querySelectorAll(".modal-btn");
-
     // close modal event
     modalClose.addEventListener("click", closeModal);
 
@@ -59,10 +56,11 @@ modalBtn.forEach((btn) => btn.addEventListener("click", () => {
         submitForm();
     });
 
-    // close thanks modal
-    thanksBtn.addEventListener("click", () => {
-        closeModal()
-    })
+     // close thanks modal
+    const thanksBtns = document.querySelectorAll('.thanks-closeBtn');
+    thanksBtns.forEach(thanksBtn => thanksBtn.addEventListener('click', () => {
+        closeModal();
+    }))
 
 }));
 

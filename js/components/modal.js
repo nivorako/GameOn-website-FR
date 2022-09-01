@@ -1,7 +1,8 @@
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBody = document.querySelector('.modal-body');
-
+const thanks = document.querySelector('.thanks');
+    
 // close modal form
 export function closeModal() {
     modalbg.style.display = "none";
@@ -95,4 +96,10 @@ export function launchModal() {
     `;
     modalBody.innerHTML = form;
     modalbg.style.display = "block";
+} 
+
+//close thanks div
+export function closeThanks(){
+    thanks.classList.add('hidden')
+
 }

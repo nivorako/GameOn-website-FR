@@ -48,7 +48,7 @@ modalBtn.forEach((btn) => btn.addEventListener("click", () => {
     fieldsValidation(location, validateLocation, 'change');
     fieldsValidation(check, validateCheck, 'change')
 
-const modalBtn = document.querySelectorAll(".modal-btn");
+    const modalBtn = document.querySelectorAll(".modal-btn");
 
     // close modal event
     modalClose.addEventListener("click", closeModal);
@@ -60,7 +60,9 @@ const modalBtn = document.querySelectorAll(".modal-btn");
     });
 
     // close thanks modal
-    thanksBtn.addEventListener("click", closeModal)
+    thanksBtn.addEventListener("click", () => {
+        closeModal()
+    })
 
 }));
 

@@ -13,8 +13,8 @@ const errorList = {
     "firstname": "veuillez ecrire deux caractères au minimum",
     "lastname": "veuillez ecrire deux caractères au minimum",
     "email": "veuillez entrez un mail valide",
-    "birthdate": "minimum deux ans pour zouer",
-    "quantity": "Entrez un chiffre entre 0 et 50",
+    "birthdate": "minimum deux ans pour jouer",
+    "quantity": "Entrez un chiffre entre 1 et 50",
     'location': "choisissez une ville",
     "checkbox": "veuillez valder la condition générale"
 }
